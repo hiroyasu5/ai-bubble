@@ -4062,18 +4062,18 @@
       "sd_h200_rental": 3.1
     },
     "2026-10-17": {
-      "breadth200_hyperscaler": 80.0,
-      "breadth200_neocloud": 20.0,
-      "breadth200_network": 80.0,
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 0.0,
+      "breadth200_network": 60.0,
       "breadth200_power": 0.0,
       "breadth200_semi": 83.3,
-      "breadth_200_pct": 58.3,
-      "breadth_50_pct": 25.0,
+      "breadth_200_pct": 45.8,
+      "breadth_50_pct": 12.5,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "px_ret90_med": 4.5,
-      "rev_down_n": 2,
+      "px_ret90_med": -0.3,
+      "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 4,
       "sd_b200_rental": 5.45,
@@ -4797,14 +4797,14 @@
     },
     "2026-10-17": {
       "AMD": 15.7219,
-      "AMZN": 10.5269,
-      "APLD": -0.6104,
-      "AVGO": 19.3938,
-      "CRWV": -4.3252,
-      "GOOGL": 14.9724,
-      "META": 34.0681,
+      "AMZN": 10.5435,
+      "APLD": -0.7844,
+      "AVGO": 19.397,
+      "CRWV": -4.3329,
+      "GOOGL": 15.046,
+      "META": 34.0517,
       "MSFT": 23.6773,
-      "NBIS": -5.6426,
+      "NBIS": -6.1573,
       "NVDA": 15.9146,
       "ORCL": 10.999,
       "VRT": 9.1845
@@ -5104,10 +5104,26 @@
       "name": "HY OAS",
       "to": "yellow",
       "value": "325bp"
+    },
+    {
+      "date": "2026-10-17",
+      "from": "yellow",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "orange",
+      "value": "200DMA上 46% / 50DMA上 12%"
+    },
+    {
+      "date": "2026-10-17",
+      "from": "green",
+      "key": "market_line",
+      "name": "Market警報ライン",
+      "to": "yellow",
+      "value": "Market: 🟡 Watch (先行指標1つが悪化)"
     }
   ],
   "last_summary_date": "2026-10-12",
-  "last_updated": "2026-10-17T10:20:20+09:00",
+  "last_updated": "2026-10-17T17:54:05+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5120,7 +5136,7 @@
     "hy_oas": "yellow",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "yellow",
+    "market_breadth": "orange",
     "multiple_expansion": "unknown",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
@@ -5128,7 +5144,7 @@
     "revision_breadth": "yellow",
     "spot_ratio": "green"
   },
-  "market_level": "green",
+  "market_level": "yellow",
   "reminders_sent": {
     "APLD-2026-10-14-pre1": "2026-10-13",
     "APLD-2026-10-14-pre7": "2026-10-07",
