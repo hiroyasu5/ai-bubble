@@ -4092,6 +4092,25 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-10-19": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 0.0,
+      "breadth200_network": 60.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 83.3,
+      "breadth_200_pct": 45.8,
+      "breadth_50_pct": 12.5,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -0.3,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 5,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -4835,6 +4854,20 @@
       "NVDA": 15.9146,
       "ORCL": 10.999,
       "VRT": 9.1845
+    },
+    "2026-10-19": {
+      "AMD": 15.7219,
+      "AMZN": 10.5435,
+      "APLD": -0.7844,
+      "AVGO": 19.397,
+      "CRWV": -4.3329,
+      "GOOGL": 15.046,
+      "META": 34.0517,
+      "MSFT": 23.6773,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 10.999,
+      "VRT": 9.1845
     }
   },
   "events": [
@@ -5149,8 +5182,8 @@
       "value": "Market: 🟡 Watch (先行指標1つが悪化)"
     }
   ],
-  "last_summary_date": "2026-10-12",
-  "last_updated": "2026-10-18T18:11:54+09:00",
+  "last_summary_date": "2026-10-19",
+  "last_updated": "2026-10-19T10:16:15+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
