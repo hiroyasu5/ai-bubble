@@ -4130,7 +4130,7 @@
       "px_ret90_med": -1.0,
       "rev_down_n": 3,
       "rev_total_n": 12,
-      "rev_up_n": 5,
+      "rev_up_n": 6,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -4893,18 +4893,18 @@
       "VRT": 9.1845
     },
     "2026-10-20": {
-      "AMD": 15.7219,
-      "AMZN": 10.5435,
+      "AMD": 15.7553,
+      "AMZN": 10.5519,
       "APLD": -0.7844,
       "AVGO": 19.397,
-      "CRWV": -4.3329,
-      "GOOGL": 15.046,
-      "META": 34.0517,
-      "MSFT": 23.6773,
+      "CRWV": -4.3652,
+      "GOOGL": 15.0761,
+      "META": 33.9191,
+      "MSFT": 23.7212,
       "NBIS": -6.1573,
       "NVDA": 15.9146,
-      "ORCL": 10.999,
-      "VRT": 9.1845
+      "ORCL": 10.9916,
+      "VRT": 9.1931
     }
   },
   "events": [
@@ -5217,10 +5217,18 @@
       "name": "Market警報ライン",
       "to": "yellow",
       "value": "Market: 🟡 Watch (先行指標1つが悪化)"
+    },
+    {
+      "date": "2026-10-20",
+      "from": "yellow",
+      "key": "revision_breadth",
+      "name": "EPS Revision Breadth",
+      "to": "green",
+      "value": "Net +25% / 上方 6・変化なし 3・下方 3 (12社)"
     }
   ],
   "last_summary_date": "2026-10-19",
-  "last_updated": "2026-10-20T10:51:14+09:00",
+  "last_updated": "2026-10-20T18:43:17+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5238,7 +5246,7 @@
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
     "power_forecast": "unknown",
-    "revision_breadth": "yellow",
+    "revision_breadth": "green",
     "spot_ratio": "green"
   },
   "market_level": "yellow",
