@@ -4119,13 +4119,17 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 333.0,
+      "ig_oas_bps": 87.0,
       "px_ret90_med": -1.0,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 6,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 338.0,
+      "ust7y_bps": 501.99999999999994
     },
     "2026-10-21": {
       "breadth200_hyperscaler": 60.0,
@@ -5310,7 +5314,7 @@
     }
   ],
   "last_summary_date": "2026-10-19",
-  "last_updated": "2026-10-22T10:33:54+09:00",
+  "last_updated": "2026-10-22T18:43:51+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
