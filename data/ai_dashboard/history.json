@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-10-03": {
-      "hy_oas_bps": 304.0,
-      "ig_oas_bps": 90.0,
-      "single_b_oas_bps": 302.0,
-      "ust7y_bps": 371.0
-    },
     "2024-10-04": {
       "hy_oas_bps": 289.0,
       "ig_oas_bps": 87.0,
@@ -4159,13 +4153,17 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 340.0,
+      "ig_oas_bps": 89.0,
       "px_ret90_med": 3.9,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 6,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 346.0,
+      "ust7y_bps": 486.00000000000006
     },
     "2026-10-23": {
       "breadth200_hyperscaler": 60.0,
@@ -4179,6 +4177,25 @@
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
       "px_ret90_med": -0.6,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 6,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-10-24": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 0.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 66.7,
+      "breadth_200_pct": 45.8,
+      "breadth_50_pct": 4.2,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -0.4,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 6,
@@ -4998,6 +5015,20 @@
       "NVDA": 15.9146,
       "ORCL": 10.9916,
       "VRT": 9.1931
+    },
+    "2026-10-24": {
+      "AMD": 15.7553,
+      "AMZN": 10.5519,
+      "APLD": -0.7844,
+      "AVGO": 19.397,
+      "CRWV": -4.3652,
+      "GOOGL": 15.0761,
+      "META": 33.9191,
+      "MSFT": 23.7212,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 10.9916,
+      "VRT": 9.1931
     }
   },
   "events": [
@@ -5366,10 +5397,18 @@
       "name": "Market警報ライン",
       "to": "yellow",
       "value": "Market: 🟡 Watch (先行指標1つが悪化)"
+    },
+    {
+      "date": "2026-10-24",
+      "from": "green",
+      "key": "hy_oas",
+      "name": "HY OAS",
+      "to": "yellow",
+      "value": "340bp"
     }
   ],
   "last_summary_date": "2026-10-19",
-  "last_updated": "2026-10-23T18:40:43+09:00",
+  "last_updated": "2026-10-24T10:36:42+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5379,7 +5418,7 @@
     "dlr_rent": "green",
     "financing": "green",
     "gpu_price": "green",
-    "hy_oas": "green",
+    "hy_oas": "yellow",
     "hyperscalers": "green",
     "liquidity": "unknown",
     "market_breadth": "orange",
