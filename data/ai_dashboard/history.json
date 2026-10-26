@@ -4215,6 +4215,25 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-10-26": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 0.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 66.7,
+      "breadth_200_pct": 45.8,
+      "breadth_50_pct": 4.2,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -0.4,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 5,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -5056,6 +5075,20 @@
       "NVDA": 15.9146,
       "ORCL": 10.9955,
       "VRT": 9.1945
+    },
+    "2026-10-26": {
+      "AMD": 15.7629,
+      "AMZN": 10.5582,
+      "APLD": -0.7844,
+      "AVGO": 19.397,
+      "CRWV": -4.5876,
+      "GOOGL": 15.1107,
+      "META": 33.9225,
+      "MSFT": 23.7212,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 10.9955,
+      "VRT": 9.1945
     }
   },
   "events": [
@@ -5432,10 +5465,18 @@
       "name": "HY OAS",
       "to": "yellow",
       "value": "340bp"
+    },
+    {
+      "date": "2026-10-26",
+      "from": "green",
+      "key": "revision_breadth",
+      "name": "EPS Revision Breadth",
+      "to": "yellow",
+      "value": "Net +17% / 上方 5・変化なし 4・下方 3 (12社)"
     }
   ],
-  "last_summary_date": "2026-10-19",
-  "last_updated": "2026-10-25T18:29:34+09:00",
+  "last_summary_date": "2026-10-26",
+  "last_updated": "2026-10-26T10:10:39+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5453,7 +5494,7 @@
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
     "power_forecast": "unknown",
-    "revision_breadth": "green",
+    "revision_breadth": "yellow",
     "spot_ratio": "green"
   },
   "market_level": "yellow",
@@ -5463,6 +5504,7 @@
     "APLD-2026-10-14-pre7": "2026-10-07",
     "DLR-2026-10-22-pre1": "2026-10-21",
     "DLR-2026-10-22-pre7": "2026-10-15",
+    "GOOGL-2026-10-27-pre1": "2026-10-26",
     "GOOGL-2026-10-27-pre7": "2026-10-20",
     "META-2026-10-28-pre7": "2026-10-21",
     "MSFT-2026-10-28-pre7": "2026-10-21",
