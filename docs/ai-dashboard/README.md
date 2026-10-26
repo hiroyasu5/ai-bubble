@@ -114,7 +114,7 @@ Actionsが即座に再評価する。
 ### ダッシュボードをWebで見る
 
 リポジトリ Settings → Pages → Source を `main` / `/docs` に設定すると
-`https://<user>.github.io/gasshuku-menkyo-bot/ai-dashboard/` で見られる。
+`https://hiroyasu5.github.io/ai-bubble/ai-dashboard/` で見られる。
 設定しなくても `docs/ai-dashboard/index.html` をローカルで開けば見られる。
 
 ## 注意事項
