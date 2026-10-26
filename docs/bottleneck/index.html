@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>株ボトルネック地図</title>
+<meta name="description" content="AIの供給網のどこが詰まっているか、どこへ逃げるかを1枚の動く図で表す">
+<style>
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --ink: #1d2330; --sub: #6b7385; --line: #d9dde5;
+  --cool: #3b82f6; --mid: #f0a020; --hot: #e5484d; --ok: #1baf7a;
+  --flow: #8a94a8;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1218; --card: #181c25; --ink: #e8ebf2; --sub: #9aa3b5; --line: #2a3040;
+    --flow: #5c667a;
+  }
+}
+:root[data-theme="dark"] { --bg: #0f1218; --card: #181c25; --ink: #e8ebf2; --sub: #9aa3b5; --line: #2a3040; --flow: #5c667a; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; }
+main { max-width: 560px; margin: 0 auto; padding: 12px 16px 40px; }
+h1 { font-size: 18px; margin: 4px 0 2px; }
+.date { color: var(--sub); font-size: 12px; margin-bottom: 10px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 10px; margin-bottom: 12px; }
+.card h2 { font-size: 14px; margin: 2px 4px 6px; }
+svg { width: 100%; height: auto; display: block; }
+svg text { fill: var(--ink); font-family: inherit; }
+svg .sub { fill: var(--sub); }
+.legend { display: flex; gap: 10px; justify-content: center; font-size: 11px; color: var(--sub); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; vertical-align: -1px; margin-right: 3px; }
+#detail { font-size: 12px; min-height: 18px; padding: 0 4px; }
+#detail .bar { height: 8px; border-radius: 4px; display: inline-block; vertical-align: middle; }
+#detail table { width: 100%; border-collapse: collapse; }
+#detail td { padding: 2px 4px; }
+.foot { font-size: 11px; color: var(--sub); line-height: 1.6; }
+.foot a { color: var(--sub); }
+</style>
+</head>
+<body>
+<main>
+  <h1>株ボトルネック地図</h1>
+  <div class="date" id="date">読み込み中…</div>
+
+  <div class="card">
+    <h2>逃げる？</h2>
+    <svg id="gauge" viewBox="0 0 360 190" role="img" aria-label="逃げる度メーター"></svg>
+  </div>
+
+  <div class="card">
+    <h2>どこが詰まってる？</h2>
+    <svg id="map" viewBox="0 0 360 615" role="img" aria-label="AI供給網の詰まり地図"></svg>
+    <div class="legend"><span><i style="background:var(--cool)"></i>流れている</span><span><i style="background:var(--mid)"></i>混み始め</span><span><i style="background:var(--hot)"></i>詰まり</span></div>
+    <div id="detail"></div>
+  </div>
+
+  <div class="card">
+    <h2>逃げ場はどこ？（この1か月、AI株より強い所へ流れる）</h2>
+    <svg id="havens" viewBox="0 0 360 250" role="img" aria-label="逃げ場の図"></svg>
+  </div>
+
+  <div class="card">
+    <h2>詰まりの移り変わり</h2>
+    <svg id="heat" viewBox="0 0 360 200" role="img" aria-label="詰まり度の履歴"></svg>
+  </div>
+
+  <p class="foot">
+    詰まり度は株価だけで測った近似です（3か月の強さの順位と、50日線より上の銘柄の割合の平均）。市場がどこを「詰まり」と見ているかであって、実際の納期や価格のデータではありません。
+    逃げる度は <a href="../ai-dashboard/">AI Bubble Dashboard</a> の判定から作っています。投資判断は自己責任で。
+  </p>
+</main>
+<script>
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function mix(a, b, t) {
+  const p = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const x = p(a), y = p(b);
+  return "rgb(" + x.map((v, i) => Math.round(v + (y[i] - v) * t)).join(",") + ")";
+}
+function heatColor(v) {
+  if (v === null || v === undefined) return css("--line");
+  const c = css("--cool"), m = css("--mid"), h = css("--hot");
+  return v < 50 ? mix(c, m, v / 50) : mix(m, h, (v - 50) / 50);
+}
+const pct = v => v === null || v === undefined ? "–" : (v > 0 ? "+" : "") + v.toFixed(1) + "%";
+
+// ---------- 逃げる度メーター ----------
+function drawGauge(esc) {
+  const g = document.getElementById("gauge");
+  const cx = 180, cy = 150, r = 110;
+  const labels = ["まだ大丈夫", "出口を確認", "荷造り", "逃げる"];
+  const cols = [css("--ok"), css("--mid"), mix(css("--mid"), css("--hot"), .5), css("--hot")];
+  for (let i = 0; i < 4; i++) {
+    const a0 = Math.PI * (1 - i / 4), a1 = Math.PI * (1 - (i + 1) / 4);
+    const p = a => [cx + r * Math.cos(a), cy - r * Math.sin(a)];
+    const [x0, y0] = p(a0 - 0.02), [x1, y1] = p(a1 + 0.02);
+    el("path", { d: `M${x0} ${y0} A${r} ${r} 0 0 1 ${x1} ${y1}`, stroke: cols[i],
+      "stroke-width": i === esc.level ? 26 : 18, fill: "none", opacity: i === esc.level ? 1 : .35 }, g);
+    const am = (a0 + a1) / 2;
+    el("text", { x: cx + (r + 30) * Math.cos(am), y: cy - (r + 30) * Math.sin(am) + 4,
+      "text-anchor": "middle", "font-size": 11, class: i === esc.level ? "" : "sub",
+      "font-weight": i === esc.level ? 700 : 400 }, g, labels[i]);
+  }
+  const needle = el("g", {}, g);
+  el("line", { x1: cx, y1: cy, x2: cx - r + 22, y2: cy, stroke: css("--ink"), "stroke-width": 4, "stroke-linecap": "round" }, needle);
+  el("circle", { cx, cy, r: 8, fill: css("--ink") }, needle);
+  const target = (esc.level + 0.5) / 4 * 180;
+  if (reduce) needle.setAttribute("transform", `rotate(${target} ${cx} ${cy})`);
+  else {
+    let t0 = null;
+    const step = ts => {
+      t0 ??= ts;
+      const k = Math.min((ts - t0) / 1200, 1), e = 1 - Math.pow(1 - k, 3);
+      needle.setAttribute("transform", `rotate(${target * e} ${cx} ${cy})`);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  // Stage の6段
+  for (let s = 1; s <= 6; s++) {
+    const x = 105 + (s - 1) * 30;
+    el("circle", { cx: x, cy: 178, r: s === esc.stage ? 7 : 5,
+      fill: s <= esc.stage ? cols[Math.min(3, Math.floor((s - 1) / 1.5))] : css("--line") }, g);
+  }
+  el("text", { x: 20, y: 182, "font-size": 10, class: "sub" }, g, "Stage");
+  el("text", { x: 300, y: 182, "font-size": 10, class: "sub" }, g, esc.stage + "/6");
+}
+
+// ---------- 詰まり地図 ----------
+const POS = {
+  demand: [180, 50], gpu: [180, 150],
+  memory: [65, 260], fab: [180, 260], optics: [295, 260],
+  dc: [180, 370], grid: [180, 470], power: [180, 570],
+};
+const SHORT = { demand: "AI需要", gpu: "GPU", memory: "メモリ", fab: "製造", optics: "光通信",
+  dc: "DC", grid: "電力設備", power: "発電" };
+const EDGES = [
+  ["demand", "gpu"], ["gpu", "memory"], ["gpu", "fab"], ["gpu", "optics"],
+  ["memory", "dc"], ["fab", "dc"], ["optics", "dc"], ["power", "grid"], ["grid", "dc"],
+];
+function drawMap(layers) {
+  const g = document.getElementById("map");
+  const by = Object.fromEntries(layers.map(l => [l.key, l]));
+  const R = 34;
+  const particles = [];
+  for (const [a, b] of EDGES) {
+    const [x0, y0] = POS[a], [x1, y1] = POS[b];
+    const t = by[b]?.tightness ?? 0;
+    // 詰まった先ほど管が細い
+    el("line", { x1: x0, y1: y0, x2: x1, y2: y1, stroke: css("--line"),
+      "stroke-width": 16 - t / 100 * 11, "stroke-linecap": "round" }, g);
+    for (let i = 0; i < 4; i++) {
+      particles.push({ x0, y0, x1, y1, k: i / 4,
+        v: 0.0045 * (1 - 0.8 * t / 100),
+        dot: el("circle", { r: 3, fill: css("--flow") }, g) });
+    }
+  }
+  const detail = document.getElementById("detail");
+  for (const key in POS) {
+    const l = by[key]; if (!l) continue;
+    const [x, y] = POS[key];
+    const ng = el("g", { style: "cursor:pointer" }, g);
+    const col = heatColor(l.tightness);
+    if (l.tightness >= 60 && !reduce) {
+      const halo = el("circle", { cx: x, cy: y, r: R, fill: col, opacity: .35 }, ng);
+      el("animate", { attributeName: "r", values: `${R};${R + 12};${R}`, dur: "1.6s", repeatCount: "indefinite" }, halo);
+      el("animate", { attributeName: "opacity", values: ".45;0;.45", dur: "1.6s", repeatCount: "indefinite" }, halo);
+    }
+    el("circle", { cx: x, cy: y, r: R, fill: col }, ng);
+    el("text", { x, y: y - 4, "text-anchor": "middle", "font-size": 10.5, "font-weight": 700, style: "fill:#fff" }, ng, SHORT[key]);
+    el("text", { x, y: y + 13, "text-anchor": "middle", "font-size": 14, "font-weight": 700, style: "fill:#fff" }, ng, l.tightness ?? "–");
+    ng.addEventListener("click", () => showDetail(l));
+  }
+  function showDetail(l) {
+    const rows = l.stocks.slice().sort((a, b) => (b.r3m ?? -999) - (a.r3m ?? -999)).map(s => {
+      const w = Math.min(Math.abs(s.r3m ?? 0), 60) * 1.6;
+      const c = (s.r3m ?? 0) >= 0 ? css("--ok") : css("--hot");
+      return `<tr><td>${s.ticker}</td><td><span class="bar" style="width:${w}px;background:${c}"></span> ${pct(s.r3m)}</td><td>${s.above50 ? "▲50日線" : "▽"}</td></tr>`;
+    }).join("");
+    detail.innerHTML = `<b>${l.name}</b>　詰まり度 ${l.tightness}（3か月 ${pct(l.r3m)}）<table>${rows}</table>`;
+  }
+  const top = layers.filter(l => l.tightness !== null).sort((a, b) => b.tightness - a.tightness)[0];
+  if (top) showDetail(top);
+  const tick = () => {
+    for (const p of particles) {
+      p.k = (p.k + p.v) % 1;
+      p.dot.setAttribute("cx", p.x0 + (p.x1 - p.x0) * p.k);
+      p.dot.setAttribute("cy", p.y0 + (p.y1 - p.y0) * p.k);
+    }
+    if (!reduce) requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+// ---------- 逃げ場 ----------
+function drawHavens(hv) {
+  const g = document.getElementById("havens");
+  const src = [55, 125];
+  el("rect", { x: 10, y: 95, width: 90, height: 60, rx: 12, fill: heatColor(hv.ai_r1m < 0 ? 100 : 0) }, g);
+  el("text", { x: 55, y: 121, "text-anchor": "middle", "font-size": 12, "font-weight": 700, style: "fill:#fff" }, g, "AI株");
+  el("text", { x: 55, y: 140, "text-anchor": "middle", "font-size": 12, style: "fill:#fff" }, g, pct(hv.ai_r1m));
+  const items = hv.havens;
+  const particles = [];
+  items.forEach((h, i) => {
+    const y = 25 + i * 50, x = 250;
+    const v = h.vs_ai ?? 0;
+    const strong = v > 0;
+    const w = Math.max(2, Math.min(Math.abs(v), 30) / 30 * 14);
+    el("path", { d: `M100 125 C175 125 175 ${y} ${x - 10} ${y}`, stroke: strong ? css("--ok") : css("--line"),
+      "stroke-width": w, fill: "none", opacity: strong ? .55 : .8 }, g);
+    const path = g.lastChild;
+    el("rect", { x: x - 10, y: y - 18, width: 112, height: 36, rx: 10,
+      fill: strong ? css("--ok") : css("--card"), stroke: css("--line") }, g);
+    const tc = strong ? "fill:#fff" : "";
+    el("text", { x: x + 46, y: y - 3, "text-anchor": "middle", "font-size": 11, "font-weight": 700, style: tc }, g, h.name);
+    el("text", { x: x + 46, y: y + 12, "text-anchor": "middle", "font-size": 10.5, style: tc }, g,
+      `${h.ticker} ${pct(h.r1m)}`);
+    if (strong) {
+      const n = Math.max(1, Math.round(v / 6));
+      for (let j = 0; j < n; j++) particles.push({ path, k: j / n, v: 0.004 + v / 4000,
+        dot: el("circle", { r: 3.2, fill: css("--ok") }, g) });
+    }
+  });
+  const len = new Map();
+  const tick = () => {
+    for (const p of particles) {
+      if (!len.has(p.path)) len.set(p.path, p.path.getTotalLength());
+      p.k = (p.k + p.v) % 1;
+      const pt = p.path.getPointAtLength(p.k * len.get(p.path));
+      p.dot.setAttribute("cx", pt.x); p.dot.setAttribute("cy", pt.y);
+    }
+    if (!reduce) requestAnimationFrame(tick);
+  };
+  tick();
+}
+
+// ---------- 履歴ヒートマップ ----------
+function drawHeat(hist, layers) {
+  const g = document.getElementById("heat");
+  const left = 92, top = 6, H = 22, W = 360 - left - 6;
+  const days = hist.slice(-60);
+  const cw = W / Math.max(days.length, 1);
+  layers.forEach((l, r) => {
+    el("text", { x: left - 6, y: top + r * H + 15, "text-anchor": "end", "font-size": 10, class: "sub" }, g, l.name.replace(/\(.*\)/, ""));
+    days.forEach((d, c) => {
+      el("rect", { x: left + c * cw, y: top + r * H + 2, width: Math.max(cw - 1, 1), height: H - 4, rx: 2,
+        fill: heatColor(d.layers?.[l.key]) }, g);
+    });
+  });
+  el("text", { x: left, y: 198, "font-size": 10, class: "sub" }, g, days[0]?.date ?? "");
+  el("text", { x: 354, y: 198, "text-anchor": "end", "font-size": 10, class: "sub" }, g, days.at(-1)?.date ?? "");
+  if (days.length < 5) el("text", { x: left + W / 2, y: 190, "text-anchor": "middle", "font-size": 11, class: "sub" }, g, "毎日1列ずつ増えていきます");
+}
+
+fetch("data.json", { cache: "no-store" }).then(r => r.json()).then(d => {
+  document.getElementById("date").textContent = d.date + " 更新";
+  drawGauge(d.escape);
+  drawMap(d.layers);
+  drawHavens(d.havens);
+  drawHeat(d.history, d.layers);
+}).catch(e => { document.getElementById("date").textContent = "データを読めませんでした: " + e; });
+</script>
+</body>
+</html>

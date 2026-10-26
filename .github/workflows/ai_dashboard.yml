@@ -49,11 +49,16 @@ jobs:
           ALPHAVANTAGE_API_KEY: ${{ secrets.ALPHAVANTAGE_API_KEY }}
         run: python -m src.ai_dashboard
 
+      # 株ボトルネック地図 (docs/bottleneck/)。失敗しても AIBubble の更新は止めない
+      - name: Run bottleneck map update
+        continue-on-error: true
+        run: python -m src.bottleneck
+
       - name: Commit data and dashboard
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ai_dashboard/history.json docs/ai-dashboard/index.html
+          git add data/ai_dashboard/history.json docs/ai-dashboard/index.html data/bottleneck/history.json docs/bottleneck/data.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
             exit 0

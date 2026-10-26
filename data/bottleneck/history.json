@@ -1,0 +1,798 @@
+{
+ "daily": {
+  "2026-07-31": {
+   "escape": null,
+   "layers": {
+    "dc": 39,
+    "demand": 34,
+    "fab": 43,
+    "gpu": 36,
+    "grid": 20,
+    "memory": 50,
+    "optics": 34,
+    "power": 0
+   }
+  },
+  "2026-08-03": {
+   "escape": null,
+   "layers": {
+    "dc": 24,
+    "demand": 51,
+    "fab": 43,
+    "gpu": 48,
+    "grid": 20,
+    "memory": 50,
+    "optics": 41,
+    "power": 25
+   }
+  },
+  "2026-08-04": {
+   "escape": null,
+   "layers": {
+    "dc": 34,
+    "demand": 51,
+    "fab": 43,
+    "gpu": 73,
+    "grid": 32,
+    "memory": 50,
+    "optics": 66,
+    "power": 12
+   }
+  },
+  "2026-08-05": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 44,
+    "fab": 36,
+    "gpu": 68,
+    "grid": 32,
+    "memory": 50,
+    "optics": 54,
+    "power": 12
+   }
+  },
+  "2026-08-06": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 44,
+    "fab": 36,
+    "gpu": 75,
+    "grid": 20,
+    "memory": 29,
+    "optics": 68,
+    "power": 0
+   }
+  },
+  "2026-08-07": {
+   "escape": null,
+   "layers": {
+    "dc": 39,
+    "demand": 41,
+    "fab": 36,
+    "gpu": 68,
+    "grid": 20,
+    "memory": 14,
+    "optics": 100,
+    "power": 12
+   }
+  },
+  "2026-08-10": {
+   "escape": null,
+   "layers": {
+    "dc": 31,
+    "demand": 59,
+    "fab": 43,
+    "gpu": 61,
+    "grid": 20,
+    "memory": 14,
+    "optics": 75,
+    "power": 12
+   }
+  },
+  "2026-08-11": {
+   "escape": null,
+   "layers": {
+    "dc": 31,
+    "demand": 59,
+    "fab": 60,
+    "gpu": 61,
+    "grid": 12,
+    "memory": 14,
+    "optics": 80,
+    "power": 20
+   }
+  },
+  "2026-08-12": {
+   "escape": null,
+   "layers": {
+    "dc": 69,
+    "demand": 34,
+    "fab": 63,
+    "gpu": 61,
+    "grid": 38,
+    "memory": 7,
+    "optics": 100,
+    "power": 34
+   }
+  },
+  "2026-08-13": {
+   "escape": null,
+   "layers": {
+    "dc": 54,
+    "demand": 37,
+    "fab": 70,
+    "gpu": 61,
+    "grid": 25,
+    "memory": 21,
+    "optics": 80,
+    "power": 41
+   }
+  },
+  "2026-08-14": {
+   "escape": null,
+   "layers": {
+    "dc": 54,
+    "demand": 27,
+    "fab": 63,
+    "gpu": 66,
+    "grid": 38,
+    "memory": 48,
+    "optics": 88,
+    "power": 34
+   }
+  },
+  "2026-08-17": {
+   "escape": null,
+   "layers": {
+    "dc": 54,
+    "demand": 20,
+    "fab": 73,
+    "gpu": 61,
+    "grid": 45,
+    "memory": 41,
+    "optics": 100,
+    "power": 34
+   }
+  },
+  "2026-08-18": {
+   "escape": null,
+   "layers": {
+    "dc": 61,
+    "demand": 20,
+    "fab": 60,
+    "gpu": 41,
+    "grid": 32,
+    "memory": 36,
+    "optics": 80,
+    "power": 27
+   }
+  },
+  "2026-08-19": {
+   "escape": null,
+   "layers": {
+    "dc": 61,
+    "demand": 20,
+    "fab": 50,
+    "gpu": 61,
+    "grid": 39,
+    "memory": 7,
+    "optics": 68,
+    "power": 41
+   }
+  },
+  "2026-08-20": {
+   "escape": null,
+   "layers": {
+    "dc": 56,
+    "demand": 20,
+    "fab": 43,
+    "gpu": 54,
+    "grid": 7,
+    "memory": 34,
+    "optics": 75,
+    "power": 27
+   }
+  },
+  "2026-08-21": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 44,
+    "fab": 43,
+    "gpu": 61,
+    "grid": 20,
+    "memory": 41,
+    "optics": 75,
+    "power": 12
+   }
+  },
+  "2026-08-24": {
+   "escape": null,
+   "layers": {
+    "dc": 63,
+    "demand": 41,
+    "fab": 50,
+    "gpu": 48,
+    "grid": 14,
+    "memory": 7,
+    "optics": 54,
+    "power": 12
+   }
+  },
+  "2026-08-25": {
+   "escape": null,
+   "layers": {
+    "dc": 56,
+    "demand": 51,
+    "fab": 50,
+    "gpu": 54,
+    "grid": 7,
+    "memory": 14,
+    "optics": 68,
+    "power": 12
+   }
+  },
+  "2026-08-26": {
+   "escape": null,
+   "layers": {
+    "dc": 63,
+    "demand": 51,
+    "fab": 36,
+    "gpu": 54,
+    "grid": 27,
+    "memory": 0,
+    "optics": 75,
+    "power": 20
+   }
+  },
+  "2026-08-27": {
+   "escape": null,
+   "layers": {
+    "dc": 49,
+    "demand": 44,
+    "fab": 53,
+    "gpu": 61,
+    "grid": 21,
+    "memory": 7,
+    "optics": 88,
+    "power": 12
+   }
+  },
+  "2026-08-28": {
+   "escape": null,
+   "layers": {
+    "dc": 21,
+    "demand": 59,
+    "fab": 43,
+    "gpu": 48,
+    "grid": 14,
+    "memory": 0,
+    "optics": 75,
+    "power": 20
+   }
+  },
+  "2026-08-31": {
+   "escape": null,
+   "layers": {
+    "dc": 7,
+    "demand": 66,
+    "fab": 43,
+    "gpu": 41,
+    "grid": 21,
+    "memory": 12,
+    "optics": 75,
+    "power": 27
+   }
+  },
+  "2026-09-01": {
+   "escape": null,
+   "layers": {
+    "dc": 7,
+    "demand": 80,
+    "fab": 43,
+    "gpu": 27,
+    "grid": 36,
+    "memory": 0,
+    "optics": 54,
+    "power": 34
+   }
+  },
+  "2026-09-02": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 80,
+    "fab": 29,
+    "gpu": 20,
+    "grid": 43,
+    "memory": 12,
+    "optics": 46,
+    "power": 48
+   }
+  },
+  "2026-09-03": {
+   "escape": null,
+   "layers": {
+    "dc": 17,
+    "demand": 90,
+    "fab": 29,
+    "gpu": 34,
+    "grid": 43,
+    "memory": 12,
+    "optics": 39,
+    "power": 48
+   }
+  },
+  "2026-09-04": {
+   "escape": null,
+   "layers": {
+    "dc": 44,
+    "demand": 90,
+    "fab": 53,
+    "gpu": 61,
+    "grid": 29,
+    "memory": 12,
+    "optics": 32,
+    "power": 34
+   }
+  },
+  "2026-09-08": {
+   "escape": null,
+   "layers": {
+    "dc": 44,
+    "demand": 90,
+    "fab": 56,
+    "gpu": 59,
+    "grid": 68,
+    "memory": 25,
+    "optics": 32,
+    "power": 54
+   }
+  },
+  "2026-09-09": {
+   "escape": null,
+   "layers": {
+    "dc": 59,
+    "demand": 80,
+    "fab": 24,
+    "gpu": 73,
+    "grid": 21,
+    "memory": 38,
+    "optics": 68,
+    "power": 32
+   }
+  },
+  "2026-09-10": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 80,
+    "fab": 17,
+    "gpu": 80,
+    "grid": 36,
+    "memory": 50,
+    "optics": 39,
+    "power": 41
+   }
+  },
+  "2026-09-11": {
+   "escape": null,
+   "layers": {
+    "dc": 59,
+    "demand": 90,
+    "fab": 17,
+    "gpu": 73,
+    "grid": 68,
+    "memory": 38,
+    "optics": 52,
+    "power": 34
+   }
+  },
+  "2026-09-14": {
+   "escape": null,
+   "layers": {
+    "dc": 46,
+    "demand": 90,
+    "fab": 7,
+    "gpu": 55,
+    "grid": 21,
+    "memory": 0,
+    "optics": 39,
+    "power": 29
+   }
+  },
+  "2026-09-15": {
+   "escape": null,
+   "layers": {
+    "dc": 21,
+    "demand": 70,
+    "fab": 7,
+    "gpu": 68,
+    "grid": 36,
+    "memory": 12,
+    "optics": 39,
+    "power": 29
+   }
+  },
+  "2026-09-16": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 80,
+    "fab": 17,
+    "gpu": 80,
+    "grid": 29,
+    "memory": 25,
+    "optics": 61,
+    "power": 21
+   }
+  },
+  "2026-09-17": {
+   "escape": null,
+   "layers": {
+    "dc": 24,
+    "demand": 90,
+    "fab": 17,
+    "gpu": 80,
+    "grid": 29,
+    "memory": 25,
+    "optics": 61,
+    "power": 21
+   }
+  },
+  "2026-09-18": {
+   "escape": null,
+   "layers": {
+    "dc": 34,
+    "demand": 90,
+    "fab": 17,
+    "gpu": 80,
+    "grid": 41,
+    "memory": 38,
+    "optics": 73,
+    "power": 21
+   }
+  },
+  "2026-09-21": {
+   "escape": null,
+   "layers": {
+    "dc": 61,
+    "demand": 100,
+    "fab": 17,
+    "gpu": 80,
+    "grid": 54,
+    "memory": 38,
+    "optics": 73,
+    "power": 14
+   }
+  },
+  "2026-09-22": {
+   "escape": null,
+   "layers": {
+    "dc": 61,
+    "demand": 90,
+    "fab": 54,
+    "gpu": 80,
+    "grid": 54,
+    "memory": 45,
+    "optics": 73,
+    "power": 0
+   }
+  },
+  "2026-09-23": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 80,
+    "fab": 44,
+    "gpu": 80,
+    "grid": 41,
+    "memory": 38,
+    "optics": 73,
+    "power": 7
+   }
+  },
+  "2026-09-24": {
+   "escape": null,
+   "layers": {
+    "dc": 56,
+    "demand": 70,
+    "fab": 30,
+    "gpu": 80,
+    "grid": 46,
+    "memory": 64,
+    "optics": 54,
+    "power": 7
+   }
+  },
+  "2026-09-25": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 63,
+    "fab": 54,
+    "gpu": 88,
+    "grid": 54,
+    "memory": 50,
+    "optics": 73,
+    "power": 7
+   }
+  },
+  "2026-09-28": {
+   "escape": null,
+   "layers": {
+    "dc": 39,
+    "demand": 63,
+    "fab": 47,
+    "gpu": 88,
+    "grid": 46,
+    "memory": 38,
+    "optics": 61,
+    "power": 14
+   }
+  },
+  "2026-09-29": {
+   "escape": null,
+   "layers": {
+    "dc": 39,
+    "demand": 70,
+    "fab": 57,
+    "gpu": 80,
+    "grid": 46,
+    "memory": 50,
+    "optics": 61,
+    "power": 14
+   }
+  },
+  "2026-09-30": {
+   "escape": null,
+   "layers": {
+    "dc": 56,
+    "demand": 73,
+    "fab": 57,
+    "gpu": 88,
+    "grid": 39,
+    "memory": 50,
+    "optics": 54,
+    "power": 21
+   }
+  },
+  "2026-10-01": {
+   "escape": null,
+   "layers": {
+    "dc": 49,
+    "demand": 56,
+    "fab": 71,
+    "gpu": 88,
+    "grid": 52,
+    "memory": 50,
+    "optics": 93,
+    "power": 20
+   }
+  },
+  "2026-10-02": {
+   "escape": null,
+   "layers": {
+    "dc": 49,
+    "demand": 56,
+    "fab": 71,
+    "gpu": 88,
+    "grid": 52,
+    "memory": 50,
+    "optics": 93,
+    "power": 20
+   }
+  },
+  "2026-10-05": {
+   "escape": null,
+   "layers": {
+    "dc": 49,
+    "demand": 51,
+    "fab": 86,
+    "gpu": 88,
+    "grid": 52,
+    "memory": 50,
+    "optics": 93,
+    "power": 32
+   }
+  },
+  "2026-10-06": {
+   "escape": null,
+   "layers": {
+    "dc": 59,
+    "demand": 76,
+    "fab": 57,
+    "gpu": 100,
+    "grid": 52,
+    "memory": 50,
+    "optics": 93,
+    "power": 59
+   }
+  },
+  "2026-10-07": {
+   "escape": null,
+   "layers": {
+    "dc": 41,
+    "demand": 76,
+    "fab": 57,
+    "gpu": 100,
+    "grid": 52,
+    "memory": 50,
+    "optics": 93,
+    "power": 66
+   }
+  },
+  "2026-10-08": {
+   "escape": null,
+   "layers": {
+    "dc": 21,
+    "demand": 73,
+    "fab": 47,
+    "gpu": 88,
+    "grid": 54,
+    "memory": 50,
+    "optics": 73,
+    "power": 52
+   }
+  },
+  "2026-10-09": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 76,
+    "fab": 47,
+    "gpu": 88,
+    "grid": 66,
+    "memory": 50,
+    "optics": 93,
+    "power": 59
+   }
+  },
+  "2026-10-12": {
+   "escape": null,
+   "layers": {
+    "dc": 29,
+    "demand": 83,
+    "fab": 37,
+    "gpu": 88,
+    "grid": 59,
+    "memory": 25,
+    "optics": 61,
+    "power": 52
+   }
+  },
+  "2026-10-13": {
+   "escape": null,
+   "layers": {
+    "dc": 29,
+    "demand": 83,
+    "fab": 17,
+    "gpu": 88,
+    "grid": 59,
+    "memory": 0,
+    "optics": 61,
+    "power": 52
+   }
+  },
+  "2026-10-14": {
+   "escape": null,
+   "layers": {
+    "dc": 29,
+    "demand": 66,
+    "fab": 7,
+    "gpu": 75,
+    "grid": 27,
+    "memory": 0,
+    "optics": 43,
+    "power": 59
+   }
+  },
+  "2026-10-15": {
+   "escape": null,
+   "layers": {
+    "dc": 29,
+    "demand": 73,
+    "fab": 7,
+    "gpu": 75,
+    "grid": 14,
+    "memory": 0,
+    "optics": 36,
+    "power": 46
+   }
+  },
+  "2026-10-16": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 70,
+    "fab": 7,
+    "gpu": 43,
+    "grid": 21,
+    "memory": 0,
+    "optics": 29,
+    "power": 61
+   }
+  },
+  "2026-10-19": {
+   "escape": null,
+   "layers": {
+    "dc": 7,
+    "demand": 80,
+    "fab": 14,
+    "gpu": 43,
+    "grid": 29,
+    "memory": 0,
+    "optics": 21,
+    "power": 61
+   }
+  },
+  "2026-10-20": {
+   "escape": null,
+   "layers": {
+    "dc": 7,
+    "demand": 80,
+    "fab": 14,
+    "gpu": 43,
+    "grid": 36,
+    "memory": 0,
+    "optics": 21,
+    "power": 54
+   }
+  },
+  "2026-10-21": {
+   "escape": null,
+   "layers": {
+    "dc": 0,
+    "demand": 80,
+    "fab": 14,
+    "gpu": 68,
+    "grid": 29,
+    "memory": 7,
+    "optics": 21,
+    "power": 61
+   }
+  },
+  "2026-10-22": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 60,
+    "fab": 0,
+    "gpu": 43,
+    "grid": 21,
+    "memory": 7,
+    "optics": 29,
+    "power": 48
+   }
+  },
+  "2026-10-23": {
+   "escape": null,
+   "layers": {
+    "dc": 14,
+    "demand": 60,
+    "fab": 7,
+    "gpu": 43,
+    "grid": 21,
+    "memory": 0,
+    "optics": 29,
+    "power": 48
+   }
+  },
+  "2026-10-26": {
+   "escape": 0,
+   "layers": {
+    "dc": 14,
+    "demand": 60,
+    "fab": 7,
+    "gpu": 43,
+    "grid": 21,
+    "memory": 0,
+    "optics": 29,
+    "power": 48
+   }
+  }
+ },
+ "version": "v1"
+}
