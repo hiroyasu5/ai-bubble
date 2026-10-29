@@ -818,6 +818,19 @@
     "optics": 43,
     "power": 54
    }
+  },
+  "2026-10-29": {
+   "escape": 0,
+   "layers": {
+    "dc": 14,
+    "demand": 63,
+    "fab": 17,
+    "gpu": 75,
+    "grid": 21,
+    "memory": 12,
+    "optics": 36,
+    "power": 41
+   }
   }
  },
  "version": "v1"
