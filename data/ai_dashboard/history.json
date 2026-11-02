@@ -4338,6 +4338,25 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-11-02": {
+      "breadth200_hyperscaler": 20.0,
+      "breadth200_neocloud": 20.0,
+      "breadth200_network": 80.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 66.7,
+      "breadth_200_pct": 41.7,
+      "breadth_50_pct": 4.2,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -7.6,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 3,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -5277,6 +5296,20 @@
       "NVDA": 15.9146,
       "ORCL": 11.019,
       "VRT": 9.6804
+    },
+    "2026-11-02": {
+      "AMD": 15.8472,
+      "AMZN": 10.5527,
+      "APLD": -0.7844,
+      "AVGO": 19.4651,
+      "CRWV": -4.678,
+      "GOOGL": 15.002,
+      "META": 33.9588,
+      "MSFT": 23.6897,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 11.019,
+      "VRT": 9.6804
     }
   },
   "events": [
@@ -5693,10 +5726,18 @@
       "name": "AI Market Breadth",
       "to": "red",
       "value": "200DMA上 50% / 50DMA上 21%"
+    },
+    {
+      "date": "2026-11-02",
+      "from": "green",
+      "key": "hy_oas",
+      "name": "HY OAS",
+      "to": "yellow",
+      "value": "326bp"
     }
   ],
-  "last_summary_date": "2026-10-26",
-  "last_updated": "2026-11-01T20:34:35+09:00",
+  "last_summary_date": "2026-11-02",
+  "last_updated": "2026-11-02T11:31:10+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5706,7 +5747,7 @@
     "dlr_rent": "green",
     "financing": "green",
     "gpu_price": "green",
-    "hy_oas": "green",
+    "hy_oas": "yellow",
     "hyperscalers": "green",
     "liquidity": "unknown",
     "market_breadth": "red",
@@ -5724,6 +5765,7 @@
     "AMZN-2026-10-29-pre7": "2026-10-22",
     "APLD-2026-10-14-pre1": "2026-10-13",
     "APLD-2026-10-14-pre7": "2026-10-07",
+    "CRWV-2026-11-09-pre7": "2026-11-02",
     "DLR-2026-10-22-pre1": "2026-10-21",
     "DLR-2026-10-22-pre7": "2026-10-15",
     "GOOGL-2026-10-27-pre1": "2026-10-26",
