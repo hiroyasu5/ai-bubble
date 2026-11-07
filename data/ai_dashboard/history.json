@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-10-17": {
-      "hy_oas_bps": 289.0,
-      "ig_oas_bps": 83.0,
-      "single_b_oas_bps": 284.0,
-      "ust7y_bps": 399.0
-    },
     "2024-10-18": {
       "hy_oas_bps": 288.0,
       "ig_oas_bps": 83.0,
@@ -4406,13 +4400,17 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 348.0,
+      "ig_oas_bps": 93.0,
       "px_ret90_med": -16.5,
       "rev_down_n": 4,
       "rev_total_n": 12,
       "rev_up_n": 5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 367.0,
+      "ust7y_bps": 470.0
     },
     "2026-11-06": {
       "breadth200_hyperscaler": 40.0,
@@ -4429,6 +4427,25 @@
       "rev_down_n": 4,
       "rev_total_n": 12,
       "rev_up_n": 5,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-11-07": {
+      "breadth200_hyperscaler": 40.0,
+      "breadth200_neocloud": 0.0,
+      "breadth200_network": 40.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 16.7,
+      "breadth_200_pct": 20.8,
+      "breadth_50_pct": 8.3,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "px_ret90_med": -20.3,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 6,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
@@ -5441,6 +5458,20 @@
       "NVDA": 15.9146,
       "ORCL": 11.0401,
       "VRT": 9.7425
+    },
+    "2026-11-07": {
+      "AMD": 16.3023,
+      "AMZN": 10.6718,
+      "APLD": -0.7844,
+      "AVGO": 19.4651,
+      "CRWV": -4.678,
+      "GOOGL": 14.9536,
+      "META": 33.9252,
+      "MSFT": 24.1793,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 11.0544,
+      "VRT": 9.7425
     }
   },
   "events": [
@@ -5865,10 +5896,18 @@
       "name": "HY OAS",
       "to": "yellow",
       "value": "326bp"
+    },
+    {
+      "date": "2026-11-07",
+      "from": "yellow",
+      "key": "revision_breadth",
+      "name": "EPS Revision Breadth",
+      "to": "green",
+      "value": "Net +25% / 上方 6・変化なし 3・下方 3 (12社)"
     }
   ],
   "last_summary_date": "2026-11-02",
-  "last_updated": "2026-11-06T21:34:10+09:00",
+  "last_updated": "2026-11-07T11:49:14+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -5886,7 +5925,7 @@
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
     "power_forecast": "unknown",
-    "revision_breadth": "yellow",
+    "revision_breadth": "green",
     "spot_ratio": "green"
   },
   "market_level": "yellow",
