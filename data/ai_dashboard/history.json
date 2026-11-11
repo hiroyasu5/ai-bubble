@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-10-21": {
-      "hy_oas_bps": 288.0,
-      "ig_oas_bps": 85.0,
-      "single_b_oas_bps": 283.0,
-      "ust7y_bps": 407.0
-    },
     "2024-10-22": {
       "hy_oas_bps": 292.0,
       "ig_oas_bps": 85.0,
@@ -4478,13 +4472,17 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 334.0,
+      "ig_oas_bps": 91.0,
       "px_ret90_med": -20.3,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 350.0,
+      "ust7y_bps": 476.0
     },
     "2026-11-10": {
       "breadth200_hyperscaler": 60.0,
@@ -4500,6 +4498,27 @@
       "me_90d_pt": -17.0,
       "me_n": 9,
       "px_ret90_med": -17.8,
+      "rev_down_n": 3,
+      "rev_total_n": 12,
+      "rev_up_n": 5,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-11-11": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 20.0,
+      "breadth200_network": 40.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 16.7,
+      "breadth_200_pct": 29.2,
+      "breadth_50_pct": 16.7,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "me_90d_pt": -17.1,
+      "me_n": 9,
+      "px_ret90_med": -21.6,
       "rev_down_n": 3,
       "rev_total_n": 12,
       "rev_up_n": 5,
@@ -5571,6 +5590,20 @@
       "NVDA": 15.9146,
       "ORCL": 11.0636,
       "VRT": 9.8423
+    },
+    "2026-11-11": {
+      "AMD": 17.6419,
+      "AMZN": 10.6712,
+      "APLD": -0.7844,
+      "AVGO": 19.4651,
+      "CRWV": -4.7436,
+      "GOOGL": 14.9536,
+      "META": 33.972,
+      "MSFT": 24.1793,
+      "NBIS": -6.1573,
+      "NVDA": 15.9146,
+      "ORCL": 11.0636,
+      "VRT": 9.8423
     }
   },
   "events": [
@@ -6027,10 +6060,18 @@
       "name": "Multiple Expansion",
       "to": "green",
       "value": "-17pt (90日, EPS>0の9社中央値)"
+    },
+    {
+      "date": "2026-11-11",
+      "from": "orange",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "red",
+      "value": "200DMA上 29% / 50DMA上 17%"
     }
   ],
   "last_summary_date": "2026-11-09",
-  "last_updated": "2026-11-10T22:04:58+09:00",
+  "last_updated": "2026-11-11T11:48:24+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -6043,7 +6084,7 @@
     "hy_oas": "yellow",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "orange",
+    "market_breadth": "red",
     "multiple_expansion": "green",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
