@@ -4593,6 +4593,27 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1
+    },
+    "2026-11-16": {
+      "breadth200_hyperscaler": 60.0,
+      "breadth200_neocloud": 20.0,
+      "breadth200_network": 60.0,
+      "breadth200_power": 33.3,
+      "breadth200_semi": 33.3,
+      "breadth_200_pct": 41.7,
+      "breadth_50_pct": 29.2,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "me_90d_pt": -11.4,
+      "me_n": 9,
+      "px_ret90_med": -15.6,
+      "rev_down_n": 1,
+      "rev_total_n": 12,
+      "rev_up_n": 7,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
     }
   },
   "estimates": {
@@ -5728,6 +5749,20 @@
       "NVDA": 15.8496,
       "ORCL": 11.0588,
       "VRT": 9.9187
+    },
+    "2026-11-16": {
+      "AMD": 17.6907,
+      "AMZN": 10.6804,
+      "APLD": -0.7844,
+      "AVGO": 19.4651,
+      "CRWV": -4.1344,
+      "GOOGL": 14.9693,
+      "META": 33.9721,
+      "MSFT": 24.1957,
+      "NBIS": -6.0126,
+      "NVDA": 15.8496,
+      "ORCL": 11.0588,
+      "VRT": 9.9187
     }
   },
   "events": [
@@ -6208,10 +6243,18 @@
       "name": "EPS Revision Breadth",
       "to": "green",
       "value": "Net +33% / 上方 6・変化なし 4・下方 2 (12社)"
+    },
+    {
+      "date": "2026-11-16",
+      "from": "yellow",
+      "key": "hy_oas",
+      "name": "HY OAS",
+      "to": "green",
+      "value": "320bp"
     }
   ],
-  "last_summary_date": "2026-11-09",
-  "last_updated": "2026-11-15T21:21:57+09:00",
+  "last_summary_date": "2026-11-16",
+  "last_updated": "2026-11-16T11:46:15+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -6221,7 +6264,7 @@
     "dlr_rent": "green",
     "financing": "green",
     "gpu_price": "green",
-    "hy_oas": "yellow",
+    "hy_oas": "green",
     "hyperscalers": "green",
     "liquidity": "unknown",
     "market_breadth": "orange",
