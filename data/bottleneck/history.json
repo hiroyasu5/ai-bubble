@@ -1060,8 +1060,8 @@
     "demand": 70,
     "fab": 14,
     "gpu": 48,
-    "grid": 21,
-    "memory": 29,
+    "grid": 29,
+    "memory": 21,
     "optics": 20,
     "power": 68
    }
