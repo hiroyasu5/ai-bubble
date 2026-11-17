@@ -4471,6 +4471,8 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 330.0,
+      "ig_oas_bps": 90.0,
       "me_90d_pt": -17.0,
       "me_n": 9,
       "px_ret90_med": -17.8,
@@ -4480,6 +4482,7 @@
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
       "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 347.0,
       "ust7y_bps": 488.99999999999994
     },
     "2026-11-11": {
@@ -4542,6 +4545,8 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 323.0,
+      "ig_oas_bps": 89.0,
       "me_90d_pt": -6.9,
       "me_n": 9,
       "px_ret90_med": -14.6,
@@ -4550,7 +4555,9 @@
       "rev_up_n": 5,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 344.0,
+      "ust7y_bps": 505.0
     },
     "2026-11-14": {
       "breadth200_hyperscaler": 60.0,
@@ -4608,6 +4615,27 @@
       "me_90d_pt": -11.4,
       "me_n": 9,
       "px_ret90_med": -15.6,
+      "rev_down_n": 1,
+      "rev_total_n": 12,
+      "rev_up_n": 7,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-11-17": {
+      "breadth200_hyperscaler": 40.0,
+      "breadth200_neocloud": 20.0,
+      "breadth200_network": 40.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 16.7,
+      "breadth_200_pct": 25.0,
+      "breadth_50_pct": 12.5,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "me_90d_pt": -11.7,
+      "me_n": 9,
+      "px_ret90_med": -17.1,
       "rev_down_n": 1,
       "rev_total_n": 12,
       "rev_up_n": 7,
@@ -5763,6 +5791,20 @@
       "NVDA": 15.8496,
       "ORCL": 11.0588,
       "VRT": 9.9187
+    },
+    "2026-11-17": {
+      "AMD": 17.6907,
+      "AMZN": 10.6826,
+      "APLD": -0.7844,
+      "AVGO": 19.414,
+      "CRWV": -3.6423,
+      "GOOGL": 14.9693,
+      "META": 33.9721,
+      "MSFT": 24.1899,
+      "NBIS": -5.4343,
+      "NVDA": 15.8537,
+      "ORCL": 11.0588,
+      "VRT": 9.9187
     }
   },
   "events": [
@@ -6251,10 +6293,26 @@
       "name": "HY OAS",
       "to": "green",
       "value": "320bp"
+    },
+    {
+      "date": "2026-11-17",
+      "from": "orange",
+      "key": "market_breadth",
+      "name": "AI Market Breadth",
+      "to": "red",
+      "value": "200DMA上 25% / 50DMA上 12%"
+    },
+    {
+      "date": "2026-11-17",
+      "from": "green",
+      "key": "hy_oas",
+      "name": "HY OAS",
+      "to": "yellow",
+      "value": "323bp"
     }
   ],
   "last_summary_date": "2026-11-16",
-  "last_updated": "2026-11-16T22:14:40+09:00",
+  "last_updated": "2026-11-17T14:06:36+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
@@ -6264,10 +6322,10 @@
     "dlr_rent": "green",
     "financing": "green",
     "gpu_price": "green",
-    "hy_oas": "green",
+    "hy_oas": "yellow",
     "hyperscalers": "green",
     "liquidity": "unknown",
-    "market_breadth": "orange",
+    "market_breadth": "red",
     "multiple_expansion": "green",
     "nbis_commitments": "green",
     "orcl_rpo": "unknown",
