@@ -1097,10 +1097,10 @@
    "layers": {
     "dc": 10,
     "demand": 60,
-    "fab": 21,
+    "fab": 14,
     "gpu": 48,
     "grid": 29,
-    "memory": 14,
+    "memory": 21,
     "optics": 20,
     "power": 55
    }
