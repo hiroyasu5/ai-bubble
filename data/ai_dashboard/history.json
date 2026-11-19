@@ -1,12 +1,6 @@
 {
   "composite_level": "green",
   "daily": {
-    "2024-10-29": {
-      "hy_oas_bps": 285.0,
-      "ig_oas_bps": 84.0,
-      "single_b_oas_bps": 281.0,
-      "ust7y_bps": 418.0
-    },
     "2024-10-30": {
       "hy_oas_bps": 280.0,
       "ig_oas_bps": 84.0,
@@ -4631,6 +4625,8 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 343.0,
+      "ig_oas_bps": 92.0,
       "me_90d_pt": -11.7,
       "me_n": 9,
       "px_ret90_med": -17.1,
@@ -4639,7 +4635,9 @@
       "rev_up_n": 7,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 368.0,
+      "ust7y_bps": 499.0
     },
     "2026-11-18": {
       "breadth200_hyperscaler": 40.0,
@@ -4655,6 +4653,27 @@
       "me_90d_pt": -6.5,
       "me_n": 9,
       "px_ret90_med": -19.4,
+      "rev_down_n": 1,
+      "rev_total_n": 12,
+      "rev_up_n": 7,
+      "sd_b200_rental": 5.45,
+      "sd_h100_rental": 2.53,
+      "sd_h200_rental": 3.1
+    },
+    "2026-11-19": {
+      "breadth200_hyperscaler": 40.0,
+      "breadth200_neocloud": 20.0,
+      "breadth200_network": 40.0,
+      "breadth200_power": 0.0,
+      "breadth200_semi": 16.7,
+      "breadth_200_pct": 25.0,
+      "breadth_50_pct": 16.7,
+      "breadth_coverage": 100.0,
+      "cw_b200_od_node": 68.8,
+      "cw_b200_spot_node": 34.11,
+      "me_90d_pt": -2.1,
+      "me_n": 9,
+      "px_ret90_med": -18.5,
       "rev_down_n": 1,
       "rev_total_n": 12,
       "rev_up_n": 7,
@@ -5838,6 +5857,20 @@
       "NVDA": 15.8537,
       "ORCL": 11.0588,
       "VRT": 9.9187
+    },
+    "2026-11-19": {
+      "AMD": 17.6907,
+      "AMZN": 10.6826,
+      "APLD": -0.7844,
+      "AVGO": 19.414,
+      "CRWV": -3.6423,
+      "GOOGL": 14.9693,
+      "META": 33.9721,
+      "MSFT": 24.1899,
+      "NBIS": -5.4343,
+      "NVDA": 15.8537,
+      "ORCL": 11.0588,
+      "VRT": 9.9187
     }
   },
   "events": [
@@ -6345,7 +6378,7 @@
     }
   ],
   "last_summary_date": "2026-11-16",
-  "last_updated": "2026-11-18T22:32:31+09:00",
+  "last_updated": "2026-11-19T13:12:24+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
