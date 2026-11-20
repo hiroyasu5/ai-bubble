@@ -4686,7 +4686,7 @@
       "breadth200_power": 0.0,
       "breadth200_semi": 16.7,
       "breadth_200_pct": 20.8,
-      "breadth_50_pct": 12.5,
+      "breadth_50_pct": 8.3,
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
@@ -6411,7 +6411,7 @@
     }
   ],
   "last_summary_date": "2026-11-16",
-  "last_updated": "2026-11-20T13:00:58+09:00",
+  "last_updated": "2026-11-20T22:41:48+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
