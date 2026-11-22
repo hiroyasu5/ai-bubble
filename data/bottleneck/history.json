@@ -1130,6 +1130,19 @@
     "optics": 7,
     "power": 43
    }
+  },
+  "2026-11-22": {
+   "escape": 0,
+   "layers": {
+    "dc": 0,
+    "demand": 50,
+    "fab": 14,
+    "gpu": 29,
+    "grid": 36,
+    "memory": 21,
+    "optics": 7,
+    "power": 43
+   }
   }
  },
  "version": "v1"
