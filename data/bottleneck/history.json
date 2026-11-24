@@ -1160,13 +1160,13 @@
   "2026-11-24": {
    "escape": 3,
    "layers": {
-    "dc": 10,
+    "dc": 0,
     "demand": 60,
-    "fab": 14,
+    "fab": 21,
     "gpu": 36,
     "grid": 29,
-    "memory": 21,
-    "optics": 7,
+    "memory": 7,
+    "optics": 14,
     "power": 55
    }
   }
