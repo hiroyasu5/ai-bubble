@@ -4743,6 +4743,8 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
+      "hy_oas_bps": 363.0,
+      "ig_oas_bps": 97.0,
       "me_90d_pt": -23.5,
       "me_n": 9,
       "px_ret90_med": -27.0,
@@ -4751,7 +4753,9 @@
       "rev_up_n": 8,
       "sd_b200_rental": 5.45,
       "sd_h100_rental": 2.53,
-      "sd_h200_rental": 3.1
+      "sd_h200_rental": 3.1,
+      "single_b_oas_bps": 393.0,
+      "ust7y_bps": 480.99999999999994
     },
     "2026-11-24": {
       "breadth200_hyperscaler": 40.0,
@@ -4785,9 +4789,9 @@
       "breadth_coverage": 100.0,
       "cw_b200_od_node": 68.8,
       "cw_b200_spot_node": 34.11,
-      "me_90d_pt": -18.5,
+      "me_90d_pt": -18.8,
       "me_n": 9,
-      "px_ret90_med": -21.8,
+      "px_ret90_med": -22.1,
       "rev_down_n": 1,
       "rev_total_n": 12,
       "rev_up_n": 8,
@@ -6600,7 +6604,7 @@
     }
   ],
   "last_summary_date": "2026-11-23",
-  "last_updated": "2026-11-25T00:22:59+09:00",
+  "last_updated": "2026-11-25T14:28:16+09:00",
   "levels": {
     "aep_load": "green",
     "apld_mw": "green",
