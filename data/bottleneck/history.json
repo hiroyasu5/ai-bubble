@@ -1188,12 +1188,12 @@
    "layers": {
     "dc": 0,
     "demand": 50,
-    "fab": 14,
+    "fab": 21,
     "gpu": 29,
     "grid": 36,
-    "memory": 21,
+    "memory": 14,
     "optics": 7,
-    "power": 43
+    "power": 55
    }
   }
  },
